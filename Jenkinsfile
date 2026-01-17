@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Checkout from git'){
             steps{
-                git branch: 'feature-yt-clone-app', url: 'https://github.com/Varshita5233/youtube-clone-app.git'
+                git branch: 'feature-yt-clone-app', url: 'https://github.com/faiz1487/youtube_clone.git'
             }
         }
         stage('Sonarqube Analysis'){
@@ -25,8 +25,8 @@ pipeline{
                     ${SCANNER_HOME}/bin/sonar-scanner \
                     -Dsonar.projectKey=Youtube-CICD \
                     -Dsonar.sources=. \
-                    -Dsonar.host.url=http://65.2.31.45:9000 \
-                    -Dsonar.login=sqp_903f016459e4c5464d4765892fa26c833f17d337
+                    -Dsonar.host.url=http://65.0.103.43:9000 \
+                    -Dsonar.login=squ_9c37fa889b1920b323dd99ef740ecfad89ba5e08
                     """
                 }
             }
